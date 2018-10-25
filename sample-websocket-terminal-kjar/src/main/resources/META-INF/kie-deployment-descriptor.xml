@@ -9,7 +9,26 @@
   <event-listeners/>
   <task-event-listeners/>
   <globals/>
-  <work-item-handlers/>
+  <work-item-handlers>
+    <work-item-handler>
+      <resolver>mvel</resolver>
+      <identifier>new org.jbpm.process.workitem.exec.ExecWorkItemHandler()</identifier>
+      <parameters/>
+      <name>Exec</name>
+    </work-item-handler>
+    <work-item-handler>
+      <resolver>mvel</resolver>
+      <identifier>new org.jbpm.process.workitem.owm.CurrentWeatherWorkitemHandler("YOUR_API_KEY_HERE")</identifier>
+      <parameters/>
+      <name>CurrentWeather</name>
+    </work-item-handler>
+    <work-item-handler>
+      <resolver>mvel</resolver>
+      <identifier>new org.jbpm.process.workitem.owm.DailyForecastWorkitemHandler("YOUR_API_KEY_HERE")</identifier>
+      <parameters/>
+      <name>DailyForecast</name>
+    </work-item-handler>
+  </work-item-handlers>
   <environment-entries/>
   <configurations/>
   <required-roles/>

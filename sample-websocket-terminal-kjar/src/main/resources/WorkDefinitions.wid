@@ -1,0 +1,157 @@
+[
+  [
+    "name" : "Email",
+    "parameters" : [
+      "From" : new StringDataType(),
+      "To" : new StringDataType(),
+      "Subject" : new StringDataType(),
+      "Body" : new StringDataType()
+    ],
+    "displayName" : "Email",
+    "icon" : "defaultemailicon.gif"
+  ],
+
+  [
+    "name" : "Log",
+    "parameters" : [
+      "Message" : new StringDataType()
+    ],
+    "displayName" : "Log",
+    "icon" : "defaultlogicon.gif"
+  ],
+
+  [
+    "name" : "WebService",
+    "parameters" : [
+        "Url" : new StringDataType(),
+         "Namespace" : new StringDataType(),
+         "Interface" : new StringDataType(),
+         "Operation" : new StringDataType(),
+         "Parameter" : new StringDataType(),
+         "Endpoint" : new StringDataType(),
+         "Mode" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "WS",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "Rest",
+    "parameters" : [
+        "ContentData" : new StringDataType(),
+        "Url" : new StringDataType(),
+        "Method" : new StringDataType(),
+        "ConnectTimeout" : new StringDataType(),
+        "ReadTimeout" : new StringDataType(),
+        "Username" : new StringDataType(),
+        "Password" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "REST",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+     "name" : "BusinessRuleTask",
+     "parameters" : [
+       "Language" : new StringDataType(),
+       "KieSessionName" : new StringDataType(),
+       "KieSessionType" : new StringDataType()
+     ],
+     "displayName" : "Business Rule Task",
+     "icon" : "defaultbusinessrulesicon.png",
+     "category" : "Decision tasks"
+   ],
+
+   [
+     "name" : "DecisionTask",
+     "parameters" : [
+       "Language" : new StringDataType(),
+       "Namespace" : new StringDataType(),
+       "Model" : new StringDataType(),
+       "Decision" : new StringDataType()
+     ],
+     "displayName" : "Decision Task",
+     "icon" : "defaultdecisionicon.png",
+     "category" : "Decision tasks"
+   ],
+   
+   [
+            "name" : "Exec",
+            "displayName" : "Exec",
+            "category" : "",
+            "description" : "",
+            "defaultHandler" : "mvel: new org.jbpm.process.workitem.exec.ExecWorkItemHandler()",
+            "documentation" : "exec-workitem/index.html",
+
+            "parameters" : [
+                                "Command" : new StringDataType()
+
+            ],
+            "results" : [
+                                "Output" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "org.jbpm.contrib:exec-workitem:7.14.0-SNAPSHOT"
+
+            ],
+            "icon" : ""
+
+        ],
+        
+        [
+            "name" : "DailyForecast",
+            "displayName" : "DailyForecast",
+            "category" : "",
+            "description" : "",
+            "defaultHandler" : "mvel: new org.jbpm.process.workitem.owm.DailyForecastWorkitemHandler()",
+            "documentation" : "openweathermap-workitem/index.html",
+
+            "parameters" : [
+                                "CityName" : new StringDataType()
+                ,"CountryCode" : new StringDataType()
+
+            ],
+            "results" : [
+                                "DailyForecastData" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "org.jbpm.contrib:openweathermap-workitem:7.14.0-SNAPSHOT"
+
+            ],
+            "icon" : ""
+
+        ],
+    [
+            "name" : "CurrentWeather",
+            "displayName" : "CurrentWeather",
+            "category" : "",
+            "description" : "",
+            "defaultHandler" : "mvel: new org.jbpm.process.workitem.owm.CurrentWeatherWorkitemHandler()",
+            "documentation" : "openweathermap-workitem/index.html",
+
+            "parameters" : [
+                                "CityName" : new StringDataType()
+                ,"CountryCode" : new StringDataType()
+
+            ],
+            "results" : [
+                                "CurrentWeatherData" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "org.jbpm.contrib:openweathermap-workitem:7.14.0-SNAPSHOT"
+
+            ],
+            "icon" : ""
+
+        ]
+
+]
