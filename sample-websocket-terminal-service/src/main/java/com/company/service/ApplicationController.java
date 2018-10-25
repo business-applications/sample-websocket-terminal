@@ -29,7 +29,7 @@ public class ApplicationController {
     @Autowired
     private ContainerAliasResolver aliasResolver;
 
-    private String containerAlias = "business-application-kjar";
+    private String containerAlias = "sample-websocket-terminal-kjar";
     private String processId = "terminalprocess";
 
     @GetMapping("/")
