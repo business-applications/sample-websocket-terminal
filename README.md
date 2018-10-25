@@ -65,7 +65,7 @@ replace the YOUR_API_KEY_HERE:
 
 with the real api key you get after registering on the OpenWeatherMap.
 
-6. go to sample-websocket-terminal-service and start the appliaction:
+5. go to sample-websocket-terminal-service and start the appliaction:
 
 for Windows users:
 
