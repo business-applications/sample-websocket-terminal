@@ -44,7 +44,6 @@ public class ApplicationController {
     }
 
     private String startTerminalProcess(String message) {
-        System.out.println("******** starting process with message : " + message);
         Map<String, Object> processInputs = new HashMap<>();
         processInputs.put("cMessage",
                           message);

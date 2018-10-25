@@ -3,6 +3,11 @@
   <configuration>
     <configItems>
       <config-item>
+        <name>org.kie.server.controller</name>
+        <value></value>
+        <type>java.lang.String</type>
+      </config-item>
+      <config-item>
         <name>org.kie.server.location</name>
         <value>http://localhost:8090/rest/server</value>
         <type>java.lang.String</type>
