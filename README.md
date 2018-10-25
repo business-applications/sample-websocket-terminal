@@ -114,3 +114,7 @@ show temp for Londin,UNITED_KINGDOM
 show temp for Warshaw,POLAND
 etc etc
 ```
+
+Special thanks to Andrew Barfield (https://gist.github.com/AndrewBarfield) as 
+this demo uses a (heavily) modified version of his HTML web terminal implementation 
+that you can find here: https://gist.github.com/AndrewBarfield/3ee59402501422cdec47
