@@ -36,9 +36,8 @@ offer they have (Click on the "Get Api key an Start" button)
 
 ![OpenWeatherMapApiKey](img/getapikey.png?raw=true)
 
-4. Update the Workitem Handler with your OpenWeatherMap api key:
-in sample-websocket-terminal-kjar/src/main/resources/META-INF/kie-deployment-descriptor.xml
-
+4. Update the Workitem Handler with your OpenWeatherMap api key.
+In in sample-websocket-terminal-kjar/src/main/resources/META-INF/kie-deployment-descriptor.xml 
 replace the YOUR_API_KEY_HERE:
 
 ```xml
