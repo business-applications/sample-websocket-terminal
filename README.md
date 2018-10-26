@@ -6,12 +6,16 @@ to create a process-driven websocket terminal.
 ![Sample of demo](img/demoscreenshot.png?raw=true)
 
 In this demo we create a process driven websocket web terminal. Every command entered in the terminal
-starts our business process which then executes the command. In the demo the business process
-uses the jBPM Exec Workitem, and the jBPM OpenWeatherMap Workitem. The Exec workitem executes
-all commands which do not start with "show temp for", where as the OpenWeatherMap workitem is responsible 
-to execute commands such as "show temp for Atlanta,UNITED_STATES". 
+starts our business process which then executes the command. 
 We use websockets so that the results of the business process are dynamically updated on the terminal 
 web page, without having to refresh the page at all.
+
+Each command is evaluated by business rules which determine if the command entered is "dangerous" by comparing it
+to set of determined dangerous commands such as "delete", "reboot" etc, if the command is a weather command
+which are commands that request weather info such as "show temp for Atlanta,UNITED_STATES", or if this is a 
+safe command to execut such as "ls -ltr", "pwd", or similar.
+
+![Demmo process](img/demoprocess.png?raw=true)
 
 ## Getting Started 
 1. Clone and build the needed kie server thymeleaf dialect project:
