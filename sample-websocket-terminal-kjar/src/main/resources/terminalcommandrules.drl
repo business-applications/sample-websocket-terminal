@@ -1,0 +1,22 @@
+import java.lang.Boolean;
+import com.company.model.CommandDecision;
+
+rule "evalWeatherCommand"
+ruleflow-group "terminalcommandrules"
+no-loop
+when
+    $inMessage : String( this.startsWith("show temp for") )
+    $inCommand : CommandDecision()
+then
+    $inCommand.setWeatherCommand(true);
+end
+
+rule "evalExecCommand"
+ruleflow-group "terminalcommandrules"
+no-loop
+when
+    $inMessage : String( !this.startsWith("show temp for") )
+    $inCommand : CommandDecision()
+then
+    $inCommand.setWeatherCommand(false);
+end

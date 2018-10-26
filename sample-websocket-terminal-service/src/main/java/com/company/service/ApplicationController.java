@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.company.model.CommandDecision;
 import com.company.model.TerminalMessage;
 import com.company.model.TerminalResponse;
 import org.jbpm.services.api.ProcessService;
@@ -47,6 +48,7 @@ public class ApplicationController {
         Map<String, Object> processInputs = new HashMap<>();
         processInputs.put("cMessage",
                           message);
+        processInputs.put("command", new CommandDecision());
         long pid = processService.startProcess(aliasResolver.latest(containerAlias), processId, processInputs);
         Collection<VariableDesc> pvars = dataService.getVariablesCurrentState(pid);
         for(VariableDesc var : pvars) {
