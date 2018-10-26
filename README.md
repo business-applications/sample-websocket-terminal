@@ -81,7 +81,7 @@ chmod 755 launch.bat (only has to be done once)
 ```
 
 Note that step 3 here is optional and if you would rather not go through the process of setting up an api key
-on OpenWeatherMap it is ok, in this case skip step 3 and keep "OUR_API_KEY_HERE" as is in step 4. Your app will run
+on OpenWeatherMap it is ok. In this case skip step 3 and keep "YOUR_API_KEY_HERE" as is in step 4. Your app will run
 fine, you just will not be able to get results for commands that start with "show temp for". 
 
 ## Accessing your application
