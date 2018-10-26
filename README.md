@@ -8,9 +8,9 @@ to create a process-driven websocket terminal.
 In this demo we create a process driven websocket web terminal. Every command entered in the terminal
 starts our business process which then executes the command. In the demo the business process
 uses the jBPM Exec Workitem, and the jBPM OpenWeatherMap Workitem. The Exec workitem executes
-all commands this do not start with "show temp for", where as the OpenWeatherMap workitem is responsible 
+all commands which do not start with "show temp for", where as the OpenWeatherMap workitem is responsible 
 to execute commands such as "show temp for Atlanta,UNITED_STATES". 
-We use websockets so that the results of the business process are dynamically updates on the terminal 
+We use websockets so that the results of the business process are dynamically updated on the terminal 
 web page, without having to refresh the page at all.
 
 ## Getting Started 
@@ -31,7 +31,7 @@ chmod 755 launch.sh (only needed for unix environments , use launch.bat for wind
 ./launch.sh (or launch.bat for windows)
 ```
 
-3. Setup account for OpenWeatherMap (https://openweathermap.org/price) to get an access key for the free
+3. Setup an account for OpenWeatherMap (https://openweathermap.org/price) to get an access key for the free
 offer they have (Click on the "Get Api key an Start" button)
 
 ![OpenWeatherMapApiKey](img/getapikey.png?raw=true)
@@ -80,9 +80,13 @@ chmod 755 launch.bat (only has to be done once)
 ./launch.sh clean install
 ```
 
+Note that step 3 here is optional and if you would rather not go through the process of setting up an api key
+on OpenWeatherMap it is ok, in this case skip step 3 and keep "OUR_API_KEY_HERE" as is in step 4. Your app will run
+fine, you just will not be able to get results for commands that start with "show temp for". 
+
 ## Accessing your application
 
-Once the app has started you cann access the landing page at 
+Once the app has started you can access the landing page at 
 
 ```
 localhost:8090/demo
@@ -90,7 +94,7 @@ localhost:8090/demo
 
 Depending on the system you are running on you can start entering commands into the Terminal
 and results will be dynamically posted. 
-For example if running on Unix based systems some someple commands could be 
+For example if running on Unix based systems some sample commands could be 
 
 ```
 ls -ltr
@@ -105,8 +109,8 @@ open -t
 open -a firefox someFile.someFileExtension
 ```
 
-In addition our business process an get us the current weather information. For this 
-you can enter into the terminal for example:
+If you have dont step 3 of the "Getting Started" section, your business app can get us the current weather information as well.
+For this you can enter into the terminal for example:
 
 ```
 show temp for Atlanta,UNITED_STATES
